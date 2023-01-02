@@ -6,11 +6,19 @@ import org.junit.jupiter.api.Test;
 public class CalcTest {
 
     @Test
-    void pruebaCalcularImc(){
+    void calcularImcNormal(){
 
         Calc calc = new Calc();
         double imc = calc.calcularIMC(70, 1.8);
 
-        Assertions.assertEquals(21.6, imc, 0.1);
+        Assertions.assertEquals(21.6, imc, 0.01);
+    }
+    @Test
+    void calcularImcLeandro(){
+
+        Calc calc = new Calc();
+        double imc = calc.calcularIMC(90, 1.64);
+
+        Assertions.assertEquals(33.46, imc, 0.01);
     }
 }
