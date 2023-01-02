@@ -5,13 +5,16 @@ import org.junit.jupiter.api.Test;
 
 public class CalcTest {
 
-    @Test
+    @Test()
     void calcularImcNormal(){
 
         Calc calc = new Calc();
-        double imc = calc.calcularIMC(72, 1.75);
+        double imc = calc.calcularIMC(80, 1.80);
 
-        Assertions.assertEquals(21.6, imc, 0.01);
+        Assertions.assertAll(
+                () -> Assertions.assertEquals(24.69, imc, 0.01),
+                () -> Assertions.assertTrue(imc > 0)
+        );
     }
     @Test
     void calcularImcLeandro(){

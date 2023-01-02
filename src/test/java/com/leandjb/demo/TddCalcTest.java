@@ -2,10 +2,13 @@ package com.leandjb.demo;
 
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class TddCalcTest {
 
+//    @DisplayName("transforma en centimetros")
     @Test
     public void calcularCentimetros(){
 
@@ -25,6 +28,7 @@ public class TddCalcTest {
 
         Assertions.assertEquals(1.75,m,0.01);
     }
+
     @Test
     public void calcularImcTdd(){
 
