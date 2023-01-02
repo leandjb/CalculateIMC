@@ -9,7 +9,7 @@ public class CalcTest {
     void calcularImcNormal(){
 
         Calc calc = new Calc();
-        double imc = calc.calcularIMC(70, 1.8);
+        double imc = calc.calcularIMC(72, 1.75);
 
         Assertions.assertEquals(21.6, imc, 0.01);
     }
