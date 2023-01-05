@@ -4,4 +4,6 @@ import com.leandjb.demo.models.User;
 
 public interface UserService {
     User get(String id);
+
+    void remove(String id);
 }

@@ -7,4 +7,11 @@ public class UserServiceImpl implements UserService{
     public User get(String id) {
         return null;
     }
+
+    @Override
+    public void remove(String id) {
+
+    }
+
+
 }

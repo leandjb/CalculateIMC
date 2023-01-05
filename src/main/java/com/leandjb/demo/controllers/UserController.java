@@ -25,4 +25,9 @@ public class UserController {
     User get(@RequestHeader HttpHeaders headers, @PathVariable String id) {
         return service.get(id);
     }
+
+    User remove(@RequestHeader HttpHeaders headers, @PathVariable String id){
+        service.remove(id);
+        return null;
+    }
 }

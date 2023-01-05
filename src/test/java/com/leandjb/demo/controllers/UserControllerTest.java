@@ -34,9 +34,13 @@ public class UserControllerTest {
     }
     @Test
     public void getUserTest(){
-
         User user = controller.get(null, "31");
         verify(service).get("31");
+    }
+    @Test
+    public void removeTest(){
+        User user = controller.remove(null, "12");
+        verify(service).remove("12");
     }
     @Test
     public void getUserObjectTest(){
@@ -55,9 +59,9 @@ public class UserControllerTest {
         Assertions.assertEquals("31", user.getId());
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test()
     public void getUserTestShouldThrowErrorIfIsNull(){
         when(service.get(null)).thenThrow(new IllegalArgumentException("ID no debe ser nulo"));
-        User user = controller.get(null, null)
+        User user = controller.get(null, null);
     }
 }
