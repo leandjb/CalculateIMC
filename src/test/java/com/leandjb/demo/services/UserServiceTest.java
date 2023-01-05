@@ -12,7 +12,7 @@ import static org.mockito.MockitoAnnotations.initMocks;
 public class UserServiceTest {
 
     @InjectMocks
-    private  UserService service;
+    private UserService service;
 
     @BeforeTestExecution
     public void setup(){

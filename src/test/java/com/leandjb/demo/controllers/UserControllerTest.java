@@ -54,4 +54,10 @@ public class UserControllerTest {
         Assertions.assertNotNull(user);
         Assertions.assertEquals("31", user.getId());
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void getUserTestShouldThrowErrorIfIsNull(){
+        when(service.get(null)).thenThrow(new IllegalArgumentException("ID no debe ser nulo"));
+        User user = controller.get(null, null)
+    }
 }
